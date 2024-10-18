@@ -1,22 +1,21 @@
 %global qt_version 6.7.2
 
-%global qt_module qt5compat
-
-Summary: Qt6 - Qt 5 Compatibility Libraries
 Name:    qt6-qt5compat
+
 Version: 6.7.2
+Summary: Qt6 - Qt 5 Compatibility Libraries
 Release: 0%{?dist}
 
 License: LGPL-3.0-only OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 Url:     http://www.qt.io
-%global majmin %(echo %{qt_version} | cut -d. -f1-2)
 
-Source0: https://download.qt.io/official_releases/qt/%{majmin}/%{qt_version}/submodules/%{qt_module}-everywhere-src-%{qt_version}.tar.xz
+Source0:       %{name}-%{version}.tar.xz
 
-BuildRequires: gcc-c++
 BuildRequires: cmake
+BuildRequires: gcc-c++
 BuildRequires: ninja
-BuildRequires: qt6-qtbase-devel >= %{version}
+BuildRequires: qt6-rpm-macros
+BuildRequires: qt6-qtbase-devel >= %{qt_version}
 BuildRequires: qt6-qtbase-private-devel
 # qt6-qtdeclarative is required for QtGraphicalEffects
 BuildRequires: qt6-qtdeclarative-devel
