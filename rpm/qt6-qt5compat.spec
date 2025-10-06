@@ -17,8 +17,10 @@ BuildRequires: ninja
 BuildRequires: qt6-rpm-macros
 BuildRequires: qt6-qtbase-devel >= %{qt_version}
 BuildRequires: qt6-qtbase-private-devel
+BuildRequires: qt6-qtbase-static
 # qt6-qtdeclarative is required for QtGraphicalEffects
 BuildRequires: qt6-qtdeclarative-devel
+BuildRequires: qt6-qtdeclarative-static
 BuildRequires: qt6-qtshadertools-devel
 BuildRequires: pkgconfig(xkbcommon)
 %{?_qt6:Requires: %{_qt6}%{?_isa} = %{_qt6_version}}
