@@ -1,8 +1,8 @@
-%global qt_version 6.8.3
+%global qt_version 6.8.4
 
 Name:    qt6-qt5compat
 
-Version: 6.8.3
+Version: 6.8.4
 Summary: Qt6 - Qt 5 Compatibility Libraries
 Release: 0%{?dist}
 
